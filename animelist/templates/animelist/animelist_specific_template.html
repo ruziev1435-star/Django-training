@@ -1,0 +1,77 @@
+{% extends 'animelist/base.html' %}
+{% load static %}
+
+{% block title %}My Top 3 Anime{% endblock %}
+
+{% block content %}
+<section class="anime-history">
+    <h2>My Top 3 Anime</h2>
+
+    <article class="anime-entry" id="bleach">
+        <span class="anime-cover">
+            <img src="{% static 'animelist/images/bleach.jpg' %}" alt="Bleach cover">
+        </span>
+        <h3><a href="https://old.yummyani.me/catalog/item/blich" target="_blank" rel="noopener noreferrer">Bleach</a></h3>
+        <p class="anime-meta">
+            Manga by Tite Kubo (2001-2016) · Anime by Studio Pierrot (2004-2012, returned in 2022)
+        </p>
+        <p class="anime-summary">
+            Bleach follows Ichigo Kurosaki, a teenager who can see ghosts. After meeting the
+            Soul Reaper Rukia Kuchiki, he takes on her powers and becomes a Soul Reaper himself,
+            protecting the living from evil spirits called Hollows and guiding lost souls to the
+            afterlife. The story grows into a large conflict involving the Soul Society and
+            powerful enemies.
+        </p>
+        <p class="anime-opinion">
+            My anime journey started with Bleach, and I immediately fell in love with its comedy
+            and dynamic battles. Still, I believe some moments were stretched out too long,
+            while others weren't developed well enough.
+        </p>
+    </article>
+
+    <article class="anime-entry" id="oregairu">
+        <span class="anime-cover">
+            <img src="{% static 'animelist/images/oregairu.webp' %}" alt="My Youth Romantic Comedy Is Wrong, As I Expected cover">
+        </span>
+        <h3><a href="https://yummyanime.tv/434-kak-i-ozhidalos-moja-shkolnaja-romanticheskaja-zhizn-ne-udalas-2-sezon-p1.html" target="_blank" rel="noopener noreferrer">My Youth Romantic Comedy Is Wrong, As I Expected</a></h3>
+        <p class="anime-meta">
+            Light novels by Wataru Watari (2011-2019) · Anime by Brain's Base and Feel (2013-2020)
+        </p>
+        <p class="anime-summary">
+            Also known as Oregairu, this story follows Hachiman Hikigaya, a cynical high school
+            student who distrusts the idea of youth and friendship. After an essay he writes
+            worries his teacher, he is forced to join the Volunteer Service Club with the
+            sharp-tongued Yukino Yukinoshita and later the cheerful Yui Yuigahama, where they
+            help other students with their problems.
+        </p>
+        <p class="anime-opinion">
+            I had been watching some romcoms, and they felt rushed and illogical. This one makes
+            a lot more sense, and the main protagonist's observations, his evolution, and his
+            interactions with other people are very interesting to watch.
+        </p>
+    </article>
+
+    <article class="anime-entry" id="rezero">
+        <span class="anime-cover">
+            <img src="{% static 'animelist/images/rezero.jpg' %}" alt="Re:Zero cover">
+        </span>
+        <h3><a href="https://old.yummyani.me/catalog/item/zhizn-v-drugom-mire-s-nulya-2026-09-27" target="_blank" rel="noopener noreferrer">Re:Zero - Starting Life in Another World</a></h3>
+        <p class="anime-meta">
+            Light novels by Tappei Nagatsuki (2014-present) · Anime by White Fox (2016-present)
+        </p>
+        <p class="anime-summary">
+            Subaru Natsuki, a shut-in teenager, is suddenly summoned to a fantasy world. There he
+            discovers he has the ability to "Return by Death": whenever he dies, he goes back in
+            time to a previous point. He uses it to protect the people he cares about, including
+            the half-elf Emilia, while facing the pain and trauma each loop brings.
+        </p>
+        <p class="anime-opinion">
+            I don't really know much about this anime because I was very young when I started
+            watching it, so I don't remember much. Some day, when I was more mature, I decided to
+            watch it again. I'm not a fan of sentimental moments in anime, but this one felt
+            one of a kind. I don't think there is an anime similar to this one in character
+            writing and narrative.
+        </p>
+    </article>
+</section>
+{% endblock %}

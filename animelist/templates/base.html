@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Anime Rankings{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'Animelist/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'anime_list' %}">Anime Rankings</a></h1>
+        <button class="hamburger" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="mainNav" class="main-nav">
+        <a href="{% url 'anime_list' %}">Rankings</a>
+        <a href="{% url 'post_tab' %}">Community Posts</a>
+        <a href="{% url 'feedback' %}">Submit Feedback</a>
+    </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Anime Rankings</p>
+    </footer>
+    <script src="{% static 'animelist/js/menu.js' %}" defer></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'animelist/base.html' %}
+
+{% block title %}Community Posts{% endblock %}
+
+{% block content %}
+<section class="post-list">
+    <h2>Community Posts</h2>
+
+    {% if posts %}
+        {% for post in posts %}
+            <article class="post-card">
+                <h3>{{ post.title }}</h3>
+                <p class="post-meta">
+                    By {{ post.author }} · {{ post.created_at|date:"M j, Y" }}
+                </p>
+                <p class="post-excerpt">
+                    {{ post.content|truncatewords:40 }}
+                </p>
+            </article>
+        {% endfor %}
+    {% else %}
+        <p class="post-empty">No posts yet. Be the first to share something.</p>
+    {% endif %}
+</section>
+{% endblock %}
