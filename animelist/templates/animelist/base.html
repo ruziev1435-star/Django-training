@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1><a href="{% url 'animelist' %}">Anime Rankings</a></h1>
+        <h1><a href="{% url 'animelist:home' %}">Anime Rankings</a></h1>
         <button class="hamburger" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -17,9 +17,9 @@
     </button>
 
     <nav id="mainNav" class="main-nav">
-        <a href="{% url 'animelist' %}">Rankings</a>
-        <a href="{% url 'post_tab' %}">Community Posts</a>
-        <a href="{% url 'feedback' %}">Submit Feedback</a>
+        <a href="{% url 'animelist:home' %}">Rankings</a>
+        <a href="{% url 'animelist:post' %}">Community Posts</a>
+        <a href="{% url 'animelist:feedback' %}">Submit Feedback</a>
     </nav>
     </header>
 

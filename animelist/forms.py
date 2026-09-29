@@ -28,8 +28,8 @@ class FeedbackForm(forms.ModelForm):
         }
         help_texts = {
             'title':'Please restrain from using any offensive language. We want to maintain user engagement and debate with others in a logical and formal way.'
-        },
-        error_texts = {
+        }
+        error_messages = {
             'title': {
                 'max_length': 'This header is too long',
                 'required':'PLease, enter a title'
