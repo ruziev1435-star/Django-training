@@ -1,0 +1,46 @@
+{% extends 'animelist/base.html' %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+<section class="feedback-page">
+    <h2>{{ page_title }}</h2>
+
+    <form method="post" class="feedback-form" novalidate>
+        {% csrf_token %}
+
+        {% if form.non_field_errors %}
+            <div class="form-errors">{{ form.non_field_errors }}</div>
+        {% endif %}
+
+        <div class="form-group">
+            <label for="{{ form.title.id_for_label }}">{{ form.title.label }}</label>
+            {{ form.title }}
+            {% if form.title.help_text %}<p class="form-help">{{ form.title.help_text }}</p>{% endif %}
+            {% if form.title.errors %}<p class="form-error">{{ form.title.errors }}</p>{% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.submitted_by.id_for_label }}">Your Name</label>
+            {{ form.submitted_by }}
+            {% if form.submitted_by.errors %}<p class="form-error">{{ form.submitted_by.errors }}</p>{% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.email.id_for_label }}">Email (optional)</label>
+            {{ form.email }}
+            <p class="form-help">e.g. yourname@gmail.com — only if you'd like a reply.</p>
+            {% if form.email.errors %}<p class="form-error">{{ form.email.errors }}</p>{% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.content.id_for_label }}">{{ form.content.label }}</label>
+            {{ form.content }}
+            {% if form.content.help_text %}<p class="form-help">{{ form.content.help_text }}</p>{% endif %}
+            {% if form.content.errors %}<p class="form-error">{{ form.content.errors }}</p>{% endif %}
+        </div>
+
+        <button type="submit" class="submit-btn">Send Feedback</button>
+    </form>
+</section>
+{% endblock %}

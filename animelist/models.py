@@ -10,8 +10,10 @@ class Anime(models.Model):
     
 class Feedback(models.Model):
     anime = models.ForeignKey(Anime, on_delete=models.CASCADE)
-    comment = models.TextField()
+    title = models.CharField(max_length=200)
+    content = models.TextField()
     submitted_by = models.CharField(max_length=100)
+    email = models.EmailField()
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
