@@ -1,0 +1,21 @@
+{% extends 'animelist/base.html' %}
+
+{% block title %}Submit Feedback{% endblock %}
+
+{% block content %}
+<section class="feedback-form">
+    <h2>Submit Feedback</h2>
+
+    {% if messages %}
+        {% for message in messages %}
+            <p class="feedback-message">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
+    <form method="post" action="{% url 'animelist:feedback' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Send</button>
+    </form>
+</section>
+{% endblock %}
