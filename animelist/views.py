@@ -20,5 +20,5 @@ def feedback_view(request):
             return redirect('animelist:feedback')
     else:
         form = FeedbackForm()
-    return render(request, 'animelist/feebbackform_page.html', {'form': form})
+    return render(request, 'animelist/feedbackform_page.html', {'form': form})
 # Create your views here.
