@@ -356,3 +356,171 @@ main {
         padding-top: 0;
     }
 }
+/* ---------- Page headings (posts & feedback) ---------- */
+
+.post-list h2,
+.feedback-page h2 {
+    margin: 0 0 2rem;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, var(--violet), var(--gold));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ---------- Flash messages ---------- */
+
+.messages {
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    padding: 0;
+    list-style: none;
+}
+
+.message {
+    padding: 0.9rem 1.2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 4px solid var(--violet);
+    background: var(--panel);
+}
+
+.message-success {
+    border-left-color: var(--gold);
+}
+
+/* ---------- Community posts ---------- */
+
+.post-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post-card {
+    margin-bottom: 1.25rem;
+    padding: 1.4rem 1.6rem;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 4px solid var(--violet);
+    background: linear-gradient(180deg, var(--panel), var(--panel-dark));
+}
+
+.post-card h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1.15rem;
+    color: var(--gold);
+}
+
+.post-meta {
+    margin: 0 0 0.8rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.post-excerpt {
+    margin: 0;
+}
+
+.post-empty {
+    text-align: center;
+    color: var(--muted);
+}
+
+/* ---------- Feedback form ---------- */
+
+.feedback-page {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.feedback-form {
+    padding: 2rem;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 4px solid var(--violet);
+    background: linear-gradient(180deg, var(--panel), var(--panel-dark));
+}
+
+.form-group {
+    margin-bottom: 1.4rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    font: inherit;
+    font-size: 0.9rem;
+    color: var(--text);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: var(--bg);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control::placeholder {
+    color: var(--muted);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--violet);
+    box-shadow: 0 0 0 3px rgba(124, 77, 255, 0.3);
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.form-help {
+    margin: 0.4rem 0 0;
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.form-error,
+.form-errors {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #ff8a8a;
+}
+
+.form-error ul,
+.form-errors ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.submit-btn {
+    padding: 0.8rem 2rem;
+    font: inherit;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--bg);
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--violet), var(--gold));
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 700px) {
+    .feedback-form {
+        padding: 1.4rem;
+    }
+}

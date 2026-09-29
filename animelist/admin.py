@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.db.models import Count
-from .models import Anime, Feedback
+from .models import Anime, Feedback, Post
 
 @admin.register(Anime)
 class AnimeAdmin(admin.ModelAdmin):
@@ -19,5 +19,12 @@ class AnimeAdmin(admin.ModelAdmin):
 
 @admin.register(Feedback)
 class FeedbackAdmin(admin.ModelAdmin):
-    list_display = ('anime', 'submitted_by', 'created_at')
-    date_hierarchy = 'created_at'    
+    list_display = ('title', 'anime', 'submitted_by', 'email', 'created_at')
+    date_hierarchy = 'created_at'
+    search_fields = ('title', 'content', 'submitted_by')
+
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    list_display = ('title', 'author', 'created_at')
+    date_hierarchy = 'created_at'
+    search_fields = ('title', 'content', 'author')
