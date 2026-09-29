@@ -9,7 +9,7 @@ class AnimeAdmin(admin.ModelAdmin):
     date_hierarchy = 'publication_date'
     search_fields = ('title',)
 
-    def query_set(self, request):
+    def get_queryset(self, request):
         queryset = super().get_queryset(request)
         return queryset.annotate(_feedback_count=Count('feedback'))
 
